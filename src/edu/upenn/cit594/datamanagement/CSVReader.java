@@ -21,13 +21,12 @@ public class CSVReader extends StateReader {
             String line = reader.readLine();
             if (line == null) break;
             String[] lineArray = line.split(",");
-            Double test = Double.parseDouble(lineArray[1]);
             State state = new State(lineArray[0],Double.parseDouble(lineArray[1]),Double.parseDouble(lineArray[2]));
             states.add(state);
         }
         reader.close();
         for(State stateval : states){
-            System.out.println(stateval.getStateName());
+            System.out.println(stateval.getStateName() + ", " + stateval.getLat() + ", " + stateval.getLon());
         }
     }
 
