@@ -2,24 +2,24 @@ package edu.upenn.cit594.util;
 
 public class Tweet {
     protected String tweetTxt;
-    protected float lat;
-    protected float lon;
+    protected double lat;
+    protected double lon;
 
-    public Tweet(String tweetTxt, float lat, float lon){
+    public Tweet(String tweetTxt, double lat, double lon){
         this.tweetTxt = tweetTxt;
         this.lat = lat;
         this.lon = lon;
     }
 
-    public String getStateName(){
+    public String getTweetTxt(){
         return tweetTxt;
     }
 
-    public float getLat(){
+    public double getLat(){
         return lat;
     }
 
-    public float getLon(){
+    public double getLon(){
         return lon;
     }
 

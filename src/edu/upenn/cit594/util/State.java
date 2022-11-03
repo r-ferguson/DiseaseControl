@@ -1,11 +1,13 @@
 package edu.upenn.cit594.util;
 
+import java.util.Comparator;
+
 public class State {
     protected String stateName;
-    protected float lat;
-    protected float lon;
+    protected double lat;
+    protected double lon;
 
-    public State(String stateName, float lat, float lon){
+    public State(String stateName, double lat, double lon){
         this.stateName = stateName;
         this.lat = lat;
         this.lon = lon;
@@ -15,12 +17,13 @@ public class State {
         return stateName;
     }
 
-    public float getLat(){
+    public double getLat(){
         return lat;
     }
 
-    public float getLon(){
+    public double getLon(){
         return lon;
     }
+
 
 }
