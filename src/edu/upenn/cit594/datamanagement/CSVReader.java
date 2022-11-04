@@ -25,14 +25,14 @@ public class CSVReader extends StateReader {
             states.add(state);
         }
         reader.close();
-        for(State stateval : states){
-            System.out.println(stateval.getStateName() + ", " + stateval.getLat() + ", " + stateval.getLon());
-        }
+//        for(State stateval : states){
+//            System.out.println(stateval.getStateName() + ", " + stateval.getLat() + ", " + stateval.getLon());
+//        }
     }
 
 
-    @Override
-    public int compare(String o1, String o2) {
-        return 0;
-    }
+//    @Override
+//    public int compare(String o1, String o2) {
+//        return 0;
+//    }
 }

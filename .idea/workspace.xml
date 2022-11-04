@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f4d5475e-fdcb-43f9-a5e4-ad38166ca3be" name="Changes" comment="Things happened...CSV Reader and JSON Reader may be implemented.">
-      <change afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/datamanagement/TextReaderTest.java" afterDir="false" />
+    <list default="true" id="f4d5475e-fdcb-43f9-a5e4-ad38166ca3be" name="Changes" comment="Implemented all initial parsers">
+      <change afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/processor/ProcessorTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/upenn/cit594/datamanagement/CSVReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/datamanagement/CSVReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/upenn/cit594/datamanagement/CSVReaderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/datamanagement/CSVReaderTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/upenn/cit594/datamanagement/JSONReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/datamanagement/JSONReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/upenn/cit594/datamanagement/JSONReaderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/datamanagement/JSONReaderTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/upenn/cit594/datamanagement/StateReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/datamanagement/StateReader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/upenn/cit594/datamanagement/TextReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/datamanagement/TextReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/upenn/cit594/datamanagement/TextReaderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/datamanagement/TextReaderTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/upenn/cit594/processor/Processor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/processor/Processor.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +62,7 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="edu.upenn.cit594.processor" />
       <recent name="edu.upenn.cit594.datamanagement" />
       <recent name="edu.upenn.cit594.logging" />
     </key>
@@ -68,7 +75,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1667502196547</updated>
-      <workItem from="1667502197846" duration="15917000" />
+      <workItem from="1667502197846" duration="26025000" />
     </task>
     <task id="LOCAL-00001" summary="Implemented Logger">
       <created>1667508704880</created>
@@ -84,7 +91,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667517326680</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Implemented all initial parsers">
+      <created>1667518564161</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1667518564161</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -104,6 +118,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Implemented Logger" />
     <MESSAGE value="Things happened...CSV Reader and JSON Reader may be implemented." />
-    <option name="LAST_COMMIT_MESSAGE" value="Things happened...CSV Reader and JSON Reader may be implemented." />
+    <MESSAGE value="Implemented all initial parsers" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented all initial parsers" />
   </component>
 </project>

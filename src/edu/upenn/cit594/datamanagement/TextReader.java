@@ -1,13 +1,9 @@
 package edu.upenn.cit594.datamanagement;
-
-import edu.upenn.cit594.util.State;
 import edu.upenn.cit594.util.Tweet;
-
 import java.io.BufferedReader;
-import java.nio.Buffer;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.LinkedList;
+import java.util.ArrayList;
 
 public class TextReader extends TweetReader {
 
@@ -30,10 +26,6 @@ public class TextReader extends TweetReader {
             tweets.add(tweet);
         }
         reader.close();
-        LinkedList<Tweet> storedTweets = new LinkedList<>(getTweets());
-        for (int i = 0; i < storedTweets.size(); i++){
-            System.out.println(storedTweets.get(i).getTweetTxt());
-        }
     }
 
 
