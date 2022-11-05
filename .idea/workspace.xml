@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f4d5475e-fdcb-43f9-a5e4-ad38166ca3be" name="Changes" comment="Lots of modifications.  Started Processor implementation. Regex seems to work but seems overly complicated.">
-      <change afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/ui/UserInterface.java" afterDir="false" />
+    <list default="true" id="f4d5475e-fdcb-43f9-a5e4-ad38166ca3be" name="Changes" comment="Passes Basic Tests.  Need to do more testing and clean it up and figure out if it is properly constructed.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/upenn/cit594/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/upenn/cit594/datamanagement/TextReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/datamanagement/TextReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/upenn/cit594/datamanagement/TextReaderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/datamanagement/TextReaderTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/upenn/cit594/datamanagement/CSVReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/datamanagement/CSVReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/upenn/cit594/datamanagement/CSVReaderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/datamanagement/CSVReaderTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/upenn/cit594/datamanagement/StateReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/datamanagement/StateReader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/upenn/cit594/datamanagement/TweetReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/datamanagement/TweetReader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/upenn/cit594/processor/Processor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/processor/Processor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/upenn/cit594/processor/ProcessorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/processor/ProcessorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/upenn/cit594/ui/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/ui/UserInterface.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +94,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1667502196547</updated>
-      <workItem from="1667502197846" duration="28929000" />
+      <workItem from="1667502197846" duration="33257000" />
     </task>
     <task id="LOCAL-00001" summary="Implemented Logger">
       <created>1667508704880</created>
@@ -123,7 +124,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667606368217</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Added Main and UserInterface Code.">
+      <created>1667668151386</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1667668151386</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -145,6 +153,8 @@
     <MESSAGE value="Things happened...CSV Reader and JSON Reader may be implemented." />
     <MESSAGE value="Implemented all initial parsers" />
     <MESSAGE value="Lots of modifications.  Started Processor implementation. Regex seems to work but seems overly complicated." />
-    <option name="LAST_COMMIT_MESSAGE" value="Lots of modifications.  Started Processor implementation. Regex seems to work but seems overly complicated." />
+    <MESSAGE value="Added Main and UserInterface Code." />
+    <MESSAGE value="Passes Basic Tests.  Need to do more testing and clean it up and figure out if it is properly constructed." />
+    <option name="LAST_COMMIT_MESSAGE" value="Passes Basic Tests.  Need to do more testing and clean it up and figure out if it is properly constructed." />
   </component>
 </project>

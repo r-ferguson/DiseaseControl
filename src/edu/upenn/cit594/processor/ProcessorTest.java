@@ -6,8 +6,6 @@ import edu.upenn.cit594.logging.Logger;
 import edu.upenn.cit594.util.State;
 import edu.upenn.cit594.util.Tweet;
 import org.junit.jupiter.api.Test;
-
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -25,7 +23,7 @@ class ProcessorTest {
         }
         CSVReader reader = new CSVReader("states.csv");
         try {
-            reader.parseCSV();
+            reader.parseFile();
             ArrayList<State> states = reader.getStates();
         } catch (Exception e) {
             throw new RuntimeException(e);

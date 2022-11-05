@@ -20,7 +20,7 @@ public abstract class StateReader{
     public StateReader(String filename){
         this.filename = filename;
 //        this.states = new TreeSet<State>(new Helper());
-        this.states = new ArrayList<State>();
+        this.states = new ArrayList<>();
     }
 
 
@@ -28,7 +28,7 @@ public abstract class StateReader{
         this.states.add(state);
 //        Comparator comp = states.comparator();
     }
-
+    public abstract void parseFile() throws Exception;
 //    public TreeSet<State> getStates(){
 //        return states;
 //    }

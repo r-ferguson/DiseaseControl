@@ -2,23 +2,24 @@ package edu.upenn.cit594.datamanagement;
 
 import edu.upenn.cit594.util.Tweet;
 
-import java.util.LinkedList;
-import java.util.List;
+import java.util.ArrayList;
+
 
 public abstract class TweetReader {
-    LinkedList<Tweet> tweets;
+
+    ArrayList<Tweet> tweets;
     String filename;
 
     public TweetReader(String filename){
         this.filename = filename;
-        this.tweets = new LinkedList<>();
+        this.tweets = new ArrayList<>();
     }
     public abstract void parseFile() throws Exception;
     public void addTweet(Tweet tweet){
         this.tweets.add(tweet);
     }
 
-    public LinkedList<Tweet> getTweets(){
+    public ArrayList<Tweet> getTweets(){
         return tweets;
     }
 }

@@ -4,7 +4,7 @@ import edu.upenn.cit594.util.State;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
+
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -14,7 +14,7 @@ class CSVReaderTest {
     void parseCSV() {
         CSVReader reader = new CSVReader("states.csv");
         try {
-            reader.parseCSV();
+            reader.parseFile();
             ArrayList<State> states = reader.getStates();
         } catch (Exception e) {
             throw new RuntimeException(e);
