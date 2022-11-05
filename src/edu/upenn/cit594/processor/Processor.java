@@ -66,7 +66,7 @@ public class Processor {
                     double distFromState = java.lang.Math.sqrt(java.lang.Math.pow((state.getLon()-long1),2) + java.lang.Math.pow((state.getLat()-lat1),2));
 //                    System.out.println(state.getStateName() + " distance: " + distFromState);
 //                    System.out.println(distFromState + " < " + distance);
-                    if (distFromState < distance){
+                    if (distFromState <= distance){
                         closestState = state;
                         distance = distFromState;
                     }
