@@ -3,12 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="f4d5475e-fdcb-43f9-a5e4-ad38166ca3be" name="Changes" comment="Passes Basic Tests.  Need to do more testing and clean it up and figure out if it is properly constructed.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/upenn/cit594/datamanagement/CSVReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/datamanagement/CSVReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/upenn/cit594/datamanagement/CSVReaderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/datamanagement/CSVReaderTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/upenn/cit594/datamanagement/StateReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/datamanagement/StateReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/upenn/cit594/datamanagement/TweetReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/datamanagement/TweetReader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/upenn/cit594/processor/Processor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/processor/Processor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/upenn/cit594/processor/ProcessorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/processor/ProcessorTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/upenn/cit594/ui/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/ui/UserInterface.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -94,7 +89,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1667502196547</updated>
-      <workItem from="1667502197846" duration="33257000" />
+      <workItem from="1667502197846" duration="33976000" />
     </task>
     <task id="LOCAL-00001" summary="Implemented Logger">
       <created>1667508704880</created>
@@ -131,7 +126,21 @@
       <option name="project" value="LOCAL" />
       <updated>1667668151386</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Passes Basic Tests.  Need to do more testing and clean it up and figure out if it is properly constructed.">
+      <created>1667678976544</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1667678976544</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Passes Basic Tests.  Need to do more testing and clean it up and figure out if it is properly constructed.">
+      <created>1667679037265</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1667679037265</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
