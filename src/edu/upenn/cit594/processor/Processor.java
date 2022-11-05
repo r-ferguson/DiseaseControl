@@ -23,36 +23,30 @@ public class Processor {
         this.stateReader = stateReader;
         this.tweets = tweetReader.getTweets();
         this.logger = logger;
+        this.stateTotals = new TreeMap<>();
     }
 
     public void getTweets(){
-
         try {
             tweetReader.parseFile();
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
-
         this.tweets = tweetReader.getTweets();
-//        if (fileType.equals("txt")){
-//            this.tweetReader = new TextReader(filename);
-//        } else if (fileType.equals("json")){
-//            this.tweetReader = new JSONReader(filename);
-//        }
         this.tweets = this.tweetReader.getTweets();
-//        for(Tweet tweet : tweets){
-//            System.out.println(tweet.getTweetTxt());
-//        }
-//        return tweets;
     }
-    public void findFluTweets(){
+
+    public void getStates(){
         try {
             stateReader.parseFile();
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
         this.states = stateReader.getStates();
-        stateTotals = new TreeMap<>();
+    }
+
+    public void findFluTweets(){
+
         Pattern p = Pattern.compile("(?>^|\\s)[#][fF][lL][uU](?>\\Z|[^a-zA-Z])|(?>^|\\s)[fF][lL][uU](?>\\Z|[^a-zA-Z])");
         for (Tweet tweet : this.tweets){
             Matcher m = p.matcher(tweet.getTweetTxt());
@@ -81,6 +75,7 @@ public class Processor {
                 if (stateTotals.get(stateName) != null){
                     stateTotals.put(stateName, stateTotals.get(stateName)+1); //increment count if it exists
                 } else stateTotals.put(stateName, 1); //otherwise add state with count as 1
+//                stateTotals.merge(stateName,1, (prev,one)->prev+1); //interesting equivalent
             }
         }
 
