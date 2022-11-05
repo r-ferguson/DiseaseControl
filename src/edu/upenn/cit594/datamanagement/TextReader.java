@@ -12,7 +12,7 @@ public class TextReader extends TweetReader {
         super(filename);
     }
 
-    public void parseText() throws Exception{
+    public void parseFile() throws Exception{
         this.reader = Files.newBufferedReader(Paths.get(filename));
         while(true){
             String line = reader.readLine();

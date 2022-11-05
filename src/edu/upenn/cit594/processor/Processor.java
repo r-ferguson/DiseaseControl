@@ -26,16 +26,20 @@ public class Processor {
         this.logger = logger;
     }
 
-    public LinkedList<Tweet> getTweets(String filename){
-        System.out.println(filename);
-        String[] splitName = filename.split("\\.");
-        System.out.println(splitName[splitName.length-1]);
-        String fileType = splitName[splitName.length-1].toLowerCase();
-        if (fileType.equals("txt")){
-            this.tweetReader = new TextReader(filename);
-        } else if (fileType.equals("json")){
-            this.tweetReader = new JSONReader(filename);
+    public LinkedList<Tweet> getTweets(){
+
+        try {
+            tweetReader.parseFile();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
         }
+
+        this.tweets = tweetReader.getTweets();
+//        if (fileType.equals("txt")){
+//            this.tweetReader = new TextReader(filename);
+//        } else if (fileType.equals("json")){
+//            this.tweetReader = new JSONReader(filename);
+//        }
         this.tweets = this.tweetReader.getTweets();
         for(Tweet tweet : tweets){
             System.out.println(tweet.getTweetTxt());

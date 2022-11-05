@@ -10,10 +10,10 @@ import static org.junit.jupiter.api.Assertions.*;
 class TextReaderTest {
 
     @Test
-    void parseTXT() {
+    void parseFile() {
         TextReader reader = new TextReader("flu_tweets.txt");
         try {
-            reader.parseText();
+            reader.parseFile();
             ArrayList<Tweet> storedTweets = new ArrayList<>(reader.getTweets());
             for (int i = 0; i < storedTweets.size(); i++){
                 System.out.println(storedTweets.get(i).getTweetTxt());

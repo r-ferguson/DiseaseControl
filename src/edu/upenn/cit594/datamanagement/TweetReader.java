@@ -13,7 +13,7 @@ public abstract class TweetReader {
         this.filename = filename;
         this.tweets = new LinkedList<>();
     }
-
+    public abstract void parseFile() throws Exception;
     public void addTweet(Tweet tweet){
         this.tweets.add(tweet);
     }
