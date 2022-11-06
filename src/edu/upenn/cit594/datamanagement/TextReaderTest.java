@@ -11,15 +11,15 @@ class TextReaderTest {
 
     @Test
     void parseFile() {
-        TextReader reader = new TextReader("flu_tweets.txt");
-        try {
-            reader.parseFile();
-            ArrayList<Tweet> storedTweets = new ArrayList<>(reader.getTweets());
-            for (int i = 0; i < storedTweets.size(); i++){
-                System.out.println(storedTweets.get(i).getTweetTxt());
-            }
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
+//        TextReader reader = new TextReader("flu_tweets.txt");
+//        try {
+//            reader.parseFile();
+//            ArrayList<Tweet> storedTweets = new ArrayList<>(reader.getTweets());
+//            for (int i = 0; i < storedTweets.size(); i++){
+//                System.out.println(storedTweets.get(i).getTweetTxt());
+//            }
+//        } catch (Exception e) {
+//            throw new RuntimeException(e);
+//        }
     }
 }

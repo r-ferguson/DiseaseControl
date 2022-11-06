@@ -1,7 +1,5 @@
 package edu.upenn.cit594.util;
 
-import java.util.Comparator;
-
 public class State {
     protected String stateName;
     protected double lat;

@@ -17,21 +17,21 @@ class ProcessorTest {
         JSONReader jr = new JSONReader("flu_tweets.json");
         try {
             jr.parseFile();
-            ArrayList<Tweet> storedTweets = new ArrayList<>(jr.getTweets());
+//            ArrayList<Tweet> storedTweets = new ArrayList<>(jr.getTweets());
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
         CSVReader reader = new CSVReader("states.csv");
         try {
             reader.parseFile();
-            ArrayList<State> states = reader.getStates();
+//            ArrayList<State> states = reader.getStates();
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
         Logger testLog = Logger.getInstance();
         Processor pro = new Processor(jr,reader,testLog);
 //        pro.getTweets("flu_tweets.json");
-        pro.findFluTweets();
+       // pro.findFluTweets();
 
     }
 }

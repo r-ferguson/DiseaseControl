@@ -1,10 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f4d5475e-fdcb-43f9-a5e4-ad38166ca3be" name="Changes" comment="Passes Basic Tests.  Need to do more testing and clean it up and figure out if it is properly constructed.">
+    <list default="true" id="f4d5475e-fdcb-43f9-a5e4-ad38166ca3be" name="Changes" comment="Cleaned up StateReader and TweetReader.  No longer store the arraylist but rather return the arraylist.  Removed unneeded methods from these as well.">
+      <change afterPath="$PROJECT_DIR$/states2.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/upenn/cit594/datamanagement/CSVReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/datamanagement/CSVReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/upenn/cit594/datamanagement/CSVReaderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/datamanagement/CSVReaderTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/upenn/cit594/datamanagement/JSONReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/datamanagement/JSONReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/upenn/cit594/datamanagement/JSONReaderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/datamanagement/JSONReaderTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/upenn/cit594/datamanagement/StateReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/datamanagement/StateReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/upenn/cit594/datamanagement/TextReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/datamanagement/TextReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/upenn/cit594/datamanagement/TextReaderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/datamanagement/TextReaderTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/upenn/cit594/datamanagement/TweetReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/datamanagement/TweetReader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/upenn/cit594/processor/Processor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/processor/Processor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/upenn/cit594/processor/ProcessorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/processor/ProcessorTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/upenn/cit594/ui/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/ui/UserInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/upenn/cit594/util/State.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/util/State.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/upenn/cit594/util/StateCount.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,13 +56,16 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "create.test.in.the.same.root": "true",
-    "last_opened_file_path": "C:/Users/rferg/Documents/GitHub/594/Module-7(EC)/CSVReader",
+    "last_opened_file_path": "C:/Users/rferg/Documents/GitHub/594/Solo-Assignment/DiseaseControl/DiseaseControl",
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2"
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\rferg\Documents\GitHub\594\Solo-Assignment\DiseaseControl\DiseaseControl" />
+    </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
@@ -64,7 +79,7 @@
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="edu.upenn.cit594.Main" />
       <module name="DiseaseControl" />
-      <option name="PROGRAM_PARAMETERS" value="flu_tweets.json states.csv testlogger.txt" />
+      <option name="PROGRAM_PARAMETERS" value="flu_tweets.json states2.csv testlogger.txt" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="edu.upenn.cit594.*" />
@@ -89,7 +104,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1667502196547</updated>
-      <workItem from="1667502197846" duration="33976000" />
+      <workItem from="1667502197846" duration="38532000" />
+      <workItem from="1667765267621" duration="2705000" />
     </task>
     <task id="LOCAL-00001" summary="Implemented Logger">
       <created>1667508704880</created>
@@ -140,7 +156,21 @@
       <option name="project" value="LOCAL" />
       <updated>1667679037265</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Passes Basic Tests.  Need to do more testing and clean it up and figure out if it is properly constructed.">
+      <created>1667679707433</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1667679707433</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Passes Basic Tests.  Need to do more testing and clean it up and figure out if it is properly constructed.">
+      <created>1667679713940</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1667679713940</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -164,6 +194,7 @@
     <MESSAGE value="Lots of modifications.  Started Processor implementation. Regex seems to work but seems overly complicated." />
     <MESSAGE value="Added Main and UserInterface Code." />
     <MESSAGE value="Passes Basic Tests.  Need to do more testing and clean it up and figure out if it is properly constructed." />
-    <option name="LAST_COMMIT_MESSAGE" value="Passes Basic Tests.  Need to do more testing and clean it up and figure out if it is properly constructed." />
+    <MESSAGE value="Cleaned up StateReader and TweetReader.  No longer store the arraylist but rather return the arraylist.  Removed unneeded methods from these as well." />
+    <option name="LAST_COMMIT_MESSAGE" value="Cleaned up StateReader and TweetReader.  No longer store the arraylist but rather return the arraylist.  Removed unneeded methods from these as well." />
   </component>
 </project>

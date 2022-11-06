@@ -6,26 +6,26 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 
 public class TextReader extends TweetReader {
-
-    private BufferedReader reader;
     public TextReader(String filename) {
         super(filename);
     }
 
-    public void parseFile() throws Exception{
-        this.reader = Files.newBufferedReader(Paths.get(filename));
+    public ArrayList<Tweet> parseFile() throws Exception{
+        BufferedReader reader = Files.newBufferedReader(Paths.get(filename));
+        ArrayList<Tweet> tweets = new ArrayList<>();
         while(true){
             String line = reader.readLine();
             if (line == null) break;
             String[] lineArray = line.split("\t");
             lineArray[0] = lineArray[0].replaceAll("\\[","");
             lineArray[0] = lineArray[0].replaceAll("]","");
-            Double Lat = Double.parseDouble(lineArray[0].split(",")[0]);
-            Double Lon = Double.parseDouble(lineArray[0].split(",")[1]);
+            double Lat = Double.parseDouble(lineArray[0].split(",")[0]);
+            double Lon = Double.parseDouble(lineArray[0].split(",")[1]);
             Tweet tweet = new Tweet(lineArray[3],Lat,Lon);
             tweets.add(tweet);
         }
         reader.close();
+        return tweets;
     }
 
 

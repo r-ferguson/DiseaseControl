@@ -12,8 +12,8 @@ public class JSONReader extends TweetReader{
         super(filename);
     }
 
-    public void parseFile() throws Exception{
-
+    public ArrayList<Tweet> parseFile() throws Exception{
+        ArrayList<Tweet> tweets = new ArrayList<>();
         Object obj = new JSONParser().parse(new FileReader("flu_tweets.json"));
 
         JSONArray ja = (JSONArray) obj;
@@ -24,13 +24,9 @@ public class JSONReader extends TweetReader{
             JSONObject jo = (JSONObject) itr2.next();
             JSONArray location = (JSONArray) jo.get("location");
             Tweet tweet = new Tweet((String)jo.get("text"),(double)location.get(0),(double)location.get(1));
-            addTweet(tweet);
+            tweets.add(tweet);
         }
-//        ArrayList<Tweet> storedTweets = new ArrayList<>(getTweets());
-//        for (int i = 0; i < storedTweets.size(); i++){
-//            System.out.println(storedTweets.get(i).getTweetTxt());
-//        }
-
+        return tweets;
     }
 
 }

@@ -4,7 +4,6 @@ import edu.upenn.cit594.datamanagement.TweetReader;
 import edu.upenn.cit594.logging.Logger;
 import edu.upenn.cit594.util.State;
 import edu.upenn.cit594.util.Tweet;
-
 import java.util.ArrayList;
 import java.util.TreeMap;
 import java.util.regex.Matcher;
@@ -15,39 +14,33 @@ public class Processor {
     protected TweetReader tweetReader;
     protected StateReader stateReader;
     protected TreeMap<String,Integer> stateTotals;
+    protected Logger logger;
+
     protected ArrayList<Tweet> tweets;
     protected ArrayList<State> states;
-    protected Logger logger;
     public Processor(TweetReader tweetReader, StateReader stateReader, Logger logger){
         this.tweetReader = tweetReader;
         this.stateReader = stateReader;
-        this.tweets = tweetReader.getTweets();
         this.logger = logger;
         this.stateTotals = new TreeMap<>();
-    }
-
-    public void getTweets(){
         try {
-            tweetReader.parseFile();
+            this.tweets = tweetReader.parseFile();
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
-        this.tweets = tweetReader.getTweets();
-        this.tweets = this.tweetReader.getTweets();
-    }
-
-    public void getStates(){
         try {
-            stateReader.parseFile();
+            this.states = stateReader.parseFile();
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
-        this.states = stateReader.getStates();
+        findFluTweets();
     }
 
-    public void findFluTweets(){
+
+    private void findFluTweets(){
 
         Pattern p = Pattern.compile("(?>^|\\s)[#][fF][lL][uU](?>\\Z|[^a-zA-Z])|(?>^|\\s)[fF][lL][uU](?>\\Z|[^a-zA-Z])");
+
         for (Tweet tweet : this.tweets){
             Matcher m = p.matcher(tweet.getTweetTxt());
             if(m.find()){
@@ -56,6 +49,7 @@ public class Processor {
                 double lat1 = tweet.getLat();
                 double distance = 2000000000;
                 State closestState = null;
+
                 for (State state : this.states){
                     double distFromState = java.lang.Math.sqrt(java.lang.Math.pow((state.getLon()-long1),2) + java.lang.Math.pow((state.getLat()-lat1),2));
 //                    System.out.println(state.getStateName() + " distance: " + distFromState);
@@ -78,6 +72,7 @@ public class Processor {
 //                stateTotals.merge(stateName,1, (prev,one)->prev+1); //interesting equivalent
             }
         }
+
 
 
     }

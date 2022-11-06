@@ -1,38 +1,25 @@
 package edu.upenn.cit594.datamanagement;
-
 import edu.upenn.cit594.util.State;
 import java.util.ArrayList;
 
-
-//class Helper implements Comparator<State>{
-//
-//
-//    @Override
-//    public int compare(State o1, State o2) {
-//        return (o1.getStateName().compareTo(o2.getStateName()));
-//    }
-//}
-//public abstract class StateReader implements Comparator<String>{
+/**
+ * Abstract class that is the generic form of a State Reader
+ * Classes that Implement this must contain a parseFile method
+ * which describes how to parse the particular file passed in.
+ */
 public abstract class StateReader{
-    ArrayList<State> states;
     String filename;
 
     public StateReader(String filename){
         this.filename = filename;
-//        this.states = new TreeSet<State>(new Helper());
-        this.states = new ArrayList<>();
     }
 
+    /**
+     * parseFile is the specific method for how to find and store states
+     * in the specific filetype the subclass is implemented for.
+     * @return ArrayList of States that are found
+     */
 
-    public void addState(State state){
-        this.states.add(state);
-//        Comparator comp = states.comparator();
-    }
-    public abstract void parseFile() throws Exception;
-//    public TreeSet<State> getStates(){
-//        return states;
-//    }
-    public ArrayList<State> getStates(){
-        return states;
-    }
+    public abstract ArrayList<State> parseFile() throws Exception;
+
 }

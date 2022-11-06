@@ -15,7 +15,7 @@ class CSVReaderTest {
         CSVReader reader = new CSVReader("states.csv");
         try {
             reader.parseFile();
-            ArrayList<State> states = reader.getStates();
+//            ArrayList<State> states = reader.getStates();
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
