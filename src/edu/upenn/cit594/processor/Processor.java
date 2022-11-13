@@ -18,54 +18,48 @@ public class Processor {
 
     protected ArrayList<Tweet> tweets;
     protected ArrayList<State> states;
-    public Processor(TweetReader tweetReader, StateReader stateReader, Logger logger){
+    public Processor(TweetReader tweetReader, StateReader stateReader) throws Exception{
         this.tweetReader = tweetReader;
         this.stateReader = stateReader;
-        this.logger = logger;
+        this.logger = Logger.getInstance();
         this.stateTotals = new TreeMap<>();
-        try {
-            this.tweets = tweetReader.parseFile();
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
-        try {
-            this.states = stateReader.parseFile();
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
+        this.tweets = tweetReader.parseFile();
+        this.states = stateReader.parseFile();
         findFluTweets();
     }
 
 
-    private void findFluTweets(){
-
+    private void findFluTweets() throws Exception {
+        //Start with space or beginning of line followed by # f or F l or L u or U and is followed by end of line or isn't followed by a character
+        // OR starts with beginning of line and same as above except without the #
         Pattern p = Pattern.compile("(?>^|\\s)[#][fF][lL][uU](?>\\Z|[^a-zA-Z])|(?>^|\\s)[fF][lL][uU](?>\\Z|[^a-zA-Z])");
+
 
         for (Tweet tweet : this.tweets){
             Matcher m = p.matcher(tweet.getTweetTxt());
+            //check if tweet matches regex
             if(m.find()){
-//                System.out.println(tweet.getTweetTxt());
                 double long1 = tweet.getLon();
                 double lat1 = tweet.getLat();
                 double distance = 2000000000;
                 State closestState = null;
 
+                //find closest state
                 for (State state : this.states){
                     double distFromState = java.lang.Math.sqrt(java.lang.Math.pow((state.getLon()-long1),2) + java.lang.Math.pow((state.getLat()-lat1),2));
-//                    System.out.println(state.getStateName() + " distance: " + distFromState);
-//                    System.out.println(distFromState + " < " + distance);
                     if (distFromState <= distance){
                         closestState = state;
                         distance = distFromState;
                     }
                 }
+                //if closest state not found throw exception
                 if (closestState == null){
-                    System.out.println("Error: Closest State Not Found");
-                    return;
+                    throw new RuntimeException("Closest State Not Found");
                 }
                 String stateName = closestState.getStateName();
                 logger.log(stateName + "\t" + tweet.getTweetTxt()); //log flu tweet with state
 
+                //update count for state
                 if (stateTotals.get(stateName) != null){
                     stateTotals.put(stateName, stateTotals.get(stateName)+1); //increment count if it exists
                 } else stateTotals.put(stateName, 1); //otherwise add state with count as 1

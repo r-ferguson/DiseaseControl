@@ -12,18 +12,14 @@ public class Logger {
 
     public static Logger getInstance() {return instance;}
 
-    public void log (String message){
+    public void log (String message) throws Exception{
         if (getInstance()==null){
-            System.out.println("ERROR No logger instance");
+            throw new Exception("No Logger Instance");
         }
-        try{
-            out = new FileWriter(filename, true);
-            out.write(message+"\n");
-            out.close();
-        }
-        catch (Exception e){
-            e.getStackTrace();
-        }
+        out = new FileWriter(filename, true);
+        out.write(message+"\n");
+        out.close();
+
     }
 
     public void set (String filename){

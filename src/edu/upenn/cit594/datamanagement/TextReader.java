@@ -13,6 +13,7 @@ public class TextReader extends TweetReader {
     public ArrayList<Tweet> parseFile() throws Exception{
         BufferedReader reader = Files.newBufferedReader(Paths.get(filename));
         ArrayList<Tweet> tweets = new ArrayList<>();
+        //loop through file and add tweets to arraylist
         while(true){
             String line = reader.readLine();
             if (line == null) break;

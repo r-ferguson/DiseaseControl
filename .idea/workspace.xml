@@ -2,21 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f4d5475e-fdcb-43f9-a5e4-ad38166ca3be" name="Changes" comment="Cleaned up StateReader and TweetReader.  No longer store the arraylist but rather return the arraylist.  Removed unneeded methods from these as well.">
-      <change afterPath="$PROJECT_DIR$/states2.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/upenn/cit594/datamanagement/CSVReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/datamanagement/CSVReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/upenn/cit594/datamanagement/CSVReaderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/datamanagement/CSVReaderTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/upenn/cit594/datamanagement/JSONReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/datamanagement/JSONReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/upenn/cit594/datamanagement/JSONReaderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/datamanagement/JSONReaderTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/upenn/cit594/datamanagement/StateReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/datamanagement/StateReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/upenn/cit594/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/upenn/cit594/datamanagement/TextReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/datamanagement/TextReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/upenn/cit594/datamanagement/TextReaderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/datamanagement/TextReaderTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/upenn/cit594/datamanagement/TweetReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/datamanagement/TweetReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/upenn/cit594/logging/Logger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/logging/Logger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/upenn/cit594/logging/LoggerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/logging/LoggerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/upenn/cit594/processor/Processor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/processor/Processor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/upenn/cit594/processor/ProcessorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/processor/ProcessorTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/upenn/cit594/ui/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/ui/UserInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/upenn/cit594/util/State.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/util/State.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/upenn/cit594/util/StateCount.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +26,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/edu/upenn/cit594/Main.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/edu/upenn/cit594/datamanagement/TextReader.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/edu/upenn/cit594/logging/LoggerTest.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/edu/upenn/cit594/processor/Processor.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/edu/upenn/cit594/processor/ProcessorTest.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/edu/upenn/cit594/ui/UserInterface.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -56,7 +57,7 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "create.test.in.the.same.root": "true",
-    "last_opened_file_path": "C:/Users/rferg/Documents/GitHub/594/Solo-Assignment/DiseaseControl/DiseaseControl",
+    "last_opened_file_path": "C:/Users/rferg/Documents/GitHub/594/Solo-Assignment/DiseaseControl/DiseaseControl/files/tweets",
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2"
@@ -64,6 +65,8 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\rferg\Documents\GitHub\594\Solo-Assignment\DiseaseControl\DiseaseControl\files\tweets" />
+      <recent name="C:\Users\rferg\Documents\GitHub\594\Solo-Assignment\DiseaseControl\DiseaseControl\files\states" />
       <recent name="C:\Users\rferg\Documents\GitHub\594\Solo-Assignment\DiseaseControl\DiseaseControl" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
@@ -75,11 +78,11 @@
       <recent name="edu.upenn.cit594.logging" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.Main with nested files">
+    <configuration name="Main with nested files" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="edu.upenn.cit594.Main" />
       <module name="DiseaseControl" />
-      <option name="PROGRAM_PARAMETERS" value="flu_tweets.json states2.csv testlogger.txt" />
+      <option name="PROGRAM_PARAMETERS" value="files\tweets\test.flu_tweets2.txt files\states\test.states.csv files\loggers\test.logger2.txt" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="edu.upenn.cit594.*" />
@@ -90,8 +93,44 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="edu.upenn.cit594.Main" />
+      <module name="DiseaseControl" />
+      <option name="PROGRAM_PARAMETERS" value="flu_tweets3.txt states3.csv testlogger.txt" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="edu.upenn.cit594.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoggerTest.getInstance" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="DiseaseControl" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="edu.upenn.cit594.logging.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="edu.upenn.cit594.logging" />
+      <option name="MAIN_CLASS_NAME" value="edu.upenn.cit594.logging.LoggerTest" />
+      <option name="METHOD_NAME" value="getInstance" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Main with nested files" />
+      <item itemvalue="Application.Main" />
+      <item itemvalue="JUnit.LoggerTest.getInstance" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.LoggerTest.getInstance" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -105,7 +144,8 @@
       <option name="presentableId" value="Default" />
       <updated>1667502196547</updated>
       <workItem from="1667502197846" duration="38532000" />
-      <workItem from="1667765267621" duration="2705000" />
+      <workItem from="1667765267621" duration="3792000" />
+      <workItem from="1668267860346" duration="6670000" />
     </task>
     <task id="LOCAL-00001" summary="Implemented Logger">
       <created>1667508704880</created>
@@ -170,7 +210,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667679713940</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Cleaned up StateReader and TweetReader.  No longer store the arraylist but rather return the arraylist.  Removed unneeded methods from these as well.">
+      <created>1667768128604</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1667768128604</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

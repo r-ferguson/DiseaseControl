@@ -29,7 +29,11 @@ class ProcessorTest {
             throw new RuntimeException(e);
         }
         Logger testLog = Logger.getInstance();
-        Processor pro = new Processor(jr,reader,testLog);
+        try {
+            Processor pro = new Processor(jr,reader);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
 //        pro.getTweets("flu_tweets.json");
        // pro.findFluTweets();
 

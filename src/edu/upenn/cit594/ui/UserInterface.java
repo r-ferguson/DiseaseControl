@@ -13,10 +13,9 @@ public class UserInterface {
     }
 
     public void start(){
-//        processor.getTweets();
-//        processor.getStates();
-//        processor.findFluTweets();
+        //create treemap to hold final count returned by processor
         TreeMap<String,Integer> finalCount = processor.getStateTotals();
+        //loop through treemap printing the state + the entry.
         for (Map.Entry<String,Integer> entry: finalCount.entrySet()){
             System.out.println(entry.getKey() + ": " + entry.getValue());
         }
