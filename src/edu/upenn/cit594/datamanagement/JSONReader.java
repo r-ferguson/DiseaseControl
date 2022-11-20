@@ -14,7 +14,7 @@ public class JSONReader extends TweetReader{
 
     public ArrayList<Tweet> parseFile() throws Exception{
         ArrayList<Tweet> tweets = new ArrayList<>();
-        Object obj = new JSONParser().parse(new FileReader("flu_tweets.json"));
+        Object obj = new JSONParser().parse(new FileReader(filename));
 
         JSONArray ja = (JSONArray) obj;
 

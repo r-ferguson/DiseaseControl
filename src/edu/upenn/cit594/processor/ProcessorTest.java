@@ -14,7 +14,7 @@ class ProcessorTest {
 
     @Test
     void findFluTweets() {
-        JSONReader jr = new JSONReader("flu_tweets.json");
+        JSONReader jr = new JSONReader("flu_tweets2.json");
         try {
             jr.parseFile();
 //            ArrayList<Tweet> storedTweets = new ArrayList<>(jr.getTweets());
